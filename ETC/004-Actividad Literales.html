@@ -1,0 +1,26 @@
+<script>
+    /*
+        Programa sugeridor de música según edad
+        (c) 2025 Andrés Julián Ramírez Guerrero
+        Este programa sugiere un tipo de música según la edad del usuario,
+        evitando recomendar música mexicana norteña.
+    */
+
+    var edad = 17;
+
+    if (edad < 10) {
+        document.write("Escucha música clásica<br>");
+    }
+
+    if (edad >= 10 && edad <= 19) {
+        document.write("Escucha pop<br>");
+    }
+
+    if (edad >= 20 && edad <= 30) {
+        document.write("Escucha rock<br>");
+    }
+
+    if (edad > 30) {
+        document.write("Escucha electrónica<br>");
+    }
+</script>

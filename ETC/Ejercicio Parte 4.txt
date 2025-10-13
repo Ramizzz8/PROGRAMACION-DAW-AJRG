@@ -1,0 +1,106 @@
+1.-Introducción breve y contextualización - 25% de la nota del ejercicio
+
+El objetivo de este ejercicio consiste en utilizar varibles para dar informacion; A continuacion se desarrolla el ejercicio propuesto con variables, creando un programa que muestre
+tu musica favorita y tu nombre.
+
+2.-Desarrollo detallado y preciso - 25% de la nota del ejercicio
+
+En esta ocasion, se usan las variables, que son identificadores que nos permiten "almacenar" informacion para usar en nuestro codigo, que en este caso particular, las variables
+que se usan dentro de nuestro programa son:
+
+'''
+nombre_musica =("Rap")
+nombre_musica =("Ahora es Reggue")
+nombre=("Andres")
+mensaje_personalizado =("Me llamo ",nombre,"y me gusta el",nombre_musica);
+
+'''
+
+Que en este caso almacena el dato de cual es nuestra musica favorita, y como su nombre indica la variable es un dato que puede cambiar durante el codigo, y en esta ocasion como el
+enunciado lo solicita, se vuelve a reemplazar la musica por una diferente, y luego, procedemos a mostralas por consola, utilizando el
+'''
+console.log(nombre_musica)
+console.log(mensaje_personalizado)
+'''
+3.-Aplicación práctica - 25% de la nota del ejercicio
+
+A continuacion veremos el codigo completo que como se menciono eventualmente, nos almacenas datos en variables y las muestra por consola:
+
+```
+<script>
+
+    /* PROGRAMA MUSICA NIE
+    v.01 Andres Julian Ramirez Guerrero
+    Este programa crea variables musicales */
+
+    nombre_musica =("Rap")
+    console.log(nombre_musica)
+
+    nombre_musica =("Ahora es Reggue")
+    console.log(nombre_musica)
+
+    nombre=("Andres")
+
+    mensaje_personalizado= ("Me llamo ",nombre,"y me gusta el",nombre_musica);
+    console.log(mensaje_personalizado)
+
+
+</script>
+
+```
+4.-Conclusión breve - 25% de la nota del ejercicio
+
+Como conclusion podemos decir que utilizar correctamente las variables y las diferentes salidas, en este caso, por consola, nos pueden crear un programa tan sencillo,
+hasta ser la base de un programa mas grande almacenando todos los datos que se necesiten en este.
+
+5.-Limpiar el ejercicio
+
+
+El objetivo de este ejercicio consiste en utilizar varibles para dar informacion; En esta ocasion, se usan las variables, que son identificadores que nos permiten "almacenar" informacion para usar en nuestro codigo.
+
+En este caso particular, las variables
+que se usan dentro de nuestro programa son:
+
+```
+nombre_musica =("Rap")
+nombre_musica =("Ahora es Reggue")
+nombre=("Andres")
+mensaje_personalizado =("Me llamo ",nombre,"y me gusta el",nombre_musica);
+
+```
+
+Que en este caso almacena el dato de cual es nuestra musica favorita, y como su nombre indica la variable es un dato que puede cambiar durante el codigo, y en esta ocasion como el
+enunciado lo solicita, se vuelve a reemplazar la musica por una diferente, y luego, procedemos a mostralas por consola, utilizando el
+
+```
+console.log(nombre_musica)
+console.log(mensaje_personalizado)
+```
+
+A continuacion veremos el codigo completo que como se menciono eventualmente, nos almacenas datos en variables y las muestra por consola:
+
+```
+<script>
+
+    /* PROGRAMA MUSICA NIE
+    v.01 Andres Julian Ramirez Guerrero
+    Este programa crea variables musicales */
+
+    nombre_musica =("Rap")
+    console.log(nombre_musica)
+
+    nombre_musica =("Ahora es Reggue")
+    console.log(nombre_musica)
+
+    nombre=("Andres")
+
+    mensaje_personalizado= ("Me llamo ",nombre,"y me gusta el",nombre_musica);
+    console.log(mensaje_personalizado)
+
+
+</script>
+
+```
+
+Como conclusion podemos decir que una variable es un espacio en la memoria que nos permiten alamcenar informacion en el codigo y pueden crear un programa tan sencillo,
+hasta ser la base de un programa mas grande almacenando todos los datos que se necesiten en este.

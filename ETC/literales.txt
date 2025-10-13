@@ -1,0 +1,107 @@
+1.-Introducción breve y contextualización - 25% de la nota del ejercicio
+
+En este ejercicio se desarrolla una pequeña aplicación web utilizando literales en JavaScript. Los literales son valores fijos que se escriben directamente en el código
+como cadenas de texto, números, booleanos y arreglos. Nuestro objetivo es comprender cómo se declaran y utilizan estos valores para representar información dentro de una página web.
+
+2.-Desarrollo detallado y preciso - 25% de la nota del ejercicio
+
+En este codigo ejemplo de codigo basico de JavaScript usando literales, podemos observar que el literal que se usa es de tipo string, que se define como string al principio del codigo
+usando "", asi:
+
+```
+var artista_favorito= ""
+
+```
+Este seria nuestro literal en el codigo que no sdice cual es el artista favorito del usuario (Jose Vicente Carratala). Luego procedemos a asignar el valor al literal que seria "Coldplay" poniendolo
+dentro de los parentesis y comillas (porque es string)asi:
+
+```
+artista_favorito = ("Coldplay")
+
+```
+Este literal almacenan el dato de cual es el artista favorito en el codigo y a continuacion, se muestra en el documento usando document.write seguido de el literal entre parentesis, tal que asi:
+```
+document.write(aritsta-favorito)
+
+```
+
+3.-Aplicación práctica - 25% de la nota del ejercicio
+
+A continuacion este es el código que he desarrollado para ilustrar el uso de literales en JavaScript:
+
+```
+<script>
+    /* PROGRAMA DE LITERALES
+    v.01 Andres Julian Ramirez Guerrero
+    Este programa usa literales para almacenar datos */
+
+    //No hay librerias para importar
+
+    //Funciones y clases (no hay)
+
+    //Definimos Literales
+    var artista_favorito = ""
+
+    //Asigno el valor
+    artista_favorito = ("Coldplay")
+
+    //Mostramos por documento
+    document.write(artista_favorito)
+</script>
+```
+4.-Conclusión breve - 25% de la nota del ejercicio
+
+Como conclusion podemos decir que este ejercicio nos ha permitido comprender el concepto de los literales en JavaScript, mostrando cómo se pueden utilizar para almacenar datos, ademas se evidencia la
+forma básica en que los datos se representan y manipulan en los programas. Ademas se puede entender como los literales pueden ser elementos esenciales en la programación.
+
+5.-Limpiar el ejercicio
+
+
+En este ejercicio se desarrolla una pequeña aplicación web utilizando literales en JavaScript. Los literales son valores fijos que se escriben directamente en el código
+como cadenas de texto, números, booleanos y arreglos. Nuestro objetivo es comprender cómo se declaran y utilizan estos valores para representar información dentro de una página web.
+
+En este codigo ejemplo de codigo basico de JavaScript usando literales, podemos observar que el literal que se usa es de tipo string, que se define como string al principio del codigo
+usando "", asi:
+
+```
+var artista_favorito= ""
+
+```
+Este seria nuestro literal en el codigo que no sdice cual es el artista favorito del usuario (Jose Vicente Carratala). Luego procedemos a asignar el valor al literal que seria "Coldplay" poniendolo
+dentro de los parentesis y comillas (porque es string)asi:
+
+```
+artista_favorito = ("Coldplay")
+
+```
+Este literal almacenan el dato de cual es el artista favorito en el codigo y a continuacion, se muestra en el documento usando document.write seguido de el literal entre parentesis, tal que asi:
+```
+document.write(aritsta-favorito)
+
+```
+
+
+A continuacion este es el código que he desarrollado para ilustrar el uso de literales en JavaScript:
+
+```
+<script>
+    /* PROGRAMA DE LITERALES
+    v.01 Andres Julian Ramirez Guerrero
+    Este programa usa literales para almacenar datos */
+
+    //No hay librerias para importar
+
+    //Funciones y clases (no hay)
+
+    //Definimos Literales
+    var artista_favorito = ""
+
+    //Asigno el valor
+    artista_favorito = ("Coldplay")
+
+    //Mostramos por documento
+    document.write(artista_favorito)
+</script>
+```
+Como conclusion podemos decir que este ejercicio nos ha permitido comprender el concepto de los literales en JavaScript, mostrando cómo se pueden utilizar para almacenar datos, ademas se evidencia la
+forma básica en que los datos se representan y manipulan en los programas. Ademas se puede entender como los literales pueden ser elementos esenciales en la programación.
