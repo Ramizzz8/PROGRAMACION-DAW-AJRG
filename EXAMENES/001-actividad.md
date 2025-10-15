@@ -28,6 +28,6 @@ Desarrolla un programa llamado **`registro_producto.html`** que:
 1. Pida al usuario el **nombre**, **precio** y **cantidad en stock** de un producto usando `prompt()`.
 2. Calcule el **precio con IVA** (21%).
 3. Determine si el producto está **disponible** (si la cantidad en stock es mayor que 0).
-4. Muestre un mensaje de alerta si el stock es **bajo** (menos de 5 unidades).
+4. Muestre un mensaje de alerta si el stock es **bajo** (menos de 5 unidades)
 5. Muestre todos los datos del producto en la página usando `document.write()`.
 
