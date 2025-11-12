@@ -1,0 +1,13 @@
+import tkinter as tk
+
+ventana = tk.Tk()
+
+def accion():
+    etiqueta.config(text = "Y RIKITI")
+
+tk.Button(ventana,text="Click me", command = accion).pack(padx=10, pady=10)
+
+etiqueta = tk.Label(text="Pulsaste el boton?")
+etiqueta.pack(padx= 10, pady=10)
+
+ventana.mainloop() #Es decirle que no se salga

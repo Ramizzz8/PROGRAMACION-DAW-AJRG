@@ -1,0 +1,30 @@
+[
+    {
+        "titulo":"Primer articulo",
+        "fecha":"16/10/2025",
+        "autor":"Andres Julian Ramirez Guerrero",
+        "contenido":"Este es el contenido del primer articulo"
+
+    },
+    {
+        "titulo":"Primer articulo",
+        "fecha":"16/10/2025",
+        "autor":"Andres Julian Ramirez Guerrero",
+        "contenido":"Este es el contenido del segundo articulo"
+
+    },
+    {
+        "titulo":"Primer articulo",
+        "fecha":"16/10/2025",
+        "autor":"Andres Julian Ramirez Guerrero",
+        "contenido":"Este es el contenido del tercer articulo"
+
+    },
+    {
+        "titulo":"Primer articulo",
+        "fecha":"16/10/2025",
+        "autor":"Andres Julian Ramirez Guerrero",
+        "contenido":"Este es el contenido del cuarto articulo"
+
+    }
+]

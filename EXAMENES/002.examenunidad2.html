@@ -1,0 +1,56 @@
+<script>
+  /* Programaevento
+  v0.1 Andres Ramirez
+  Este es un progrma que calcula cuantas filas se necesitan para sentar a los asistentes de un evento redondeando a la alta y muestra un informe de fecha/hora del evento */
+  // Datos de entrada
+  let asistentes = prompt('Cuantas personas asisten al evento: ');
+  let asientosPorFila = prompt('Cuantos asientos hay por fila: ');
+  let dia = prompt('Introduce el dia del evento: ');
+  let mes = prompt('Introduce el mes del evento: ');
+  let anio = prompt('Introduce el año del evento: ');
+  let horaEvento = prompt('Introduce la hora del evento(HH:MM): ');
+  //crear 3 prompt para solicitar valores de satisfaccion
+  let valor1 = prompt('Introduce el primer valor de satisfaccion (1-10): ');
+  let valor2 = prompt('Introduce el segundo valor de satisfaccion (1-10): ');
+  let valor3 = prompt('Introduce el tercer valor de satisfaccion (1-10): ');
+
+  let fechaHoraEvento = new Date(
+    anio,
+    mes,
+    dia,
+    horaEvento.split(':')[0],
+    horaEvento.split(':')[1]
+  );
+
+  //Realizar el promedio de los 3 valores
+  let promedioSatisfaccion = (parseFloat(valor1) + parseFloat(valor2) + parseFloat(valor3)) / 3;
+  //Validar que todos los valores introducidos sean numericos y mostrar un mensjae de error si no lo son
+  if (
+    isNaN(asistentes) ||
+    isNaN(asientosPorFila) ||
+    isNaN(valor1) ||
+    isNaN(valor2) ||
+    isNaN(valor3)
+  ) {
+    console.log('Error: Todos los valores introducidos deben ser numericos.');
+    alert('Valores no numericos');
+  }
+  //math.PI*100
+  codigosesion = Math.round(Math.PI * 100);
+  // Calculos
+  let filasNecesarias = Math.ceil(asistentes / asientosPorFila);
+  //plasmar informacion de consola en document.write
+  document.write('<h2>=====Informe del evento=====</h2>');
+  document.write('<p>Fecha del evento: ' + dia + '/' + mes + '/' + anio + '</p>');
+  document.write('<p>Hora del evento: ' + horaEvento + '</p>');
+  document.write('<p>Asistentes: ' + asistentes + '</p>');
+  document.write('<p>Asientos por fila: ' + asientosPorFila + '</p>');
+  document.write('<p>Filas necesarias: ' + filasNecesarias + '</p>');
+  document.write('<p>El promedio de satisfaccion es: ' + promedioSatisfaccion.toFixed(2) + '</p>');
+  document.write('<p>El codigo de sesion es: ' + codigosesion + '</p>');
+  document.write('<p>Fecha y hora del evento: ', fechaHoraEvento, '</p>');
+  document.write('<p>El evento es el dia: ', dia, '</p>');
+  document.write('<p>En el mes: ', mes, '</p>');
+  document.write('<p>Del año: ', anio, '</p>');
+  document.write('<h2>===========================</h2>');
+</script>
