@@ -6,3 +6,5 @@ try:
 except Exception as mierror:
   print("Se ha producido un error")
   print(mierror)
+"""
+º"""

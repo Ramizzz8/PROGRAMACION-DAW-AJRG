@@ -1,9 +1,8 @@
-agenda = [
-  'Andres Ramirez',
-  'Daniel',
-  'Julian'
-]
+#x, y, z
+coordenadas = {
+  'x': 4,
+  'y': 5,
+  'z': 6
+  }
 
-print(agenda)
-agenda.pop(1)  # elimina el ultimo elemento
-print(agenda)
+print("Coordenadas")

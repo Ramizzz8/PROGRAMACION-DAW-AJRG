@@ -18,3 +18,11 @@ def calculaDoble():
             print("Lo intente pero no se pudo")
 
 calculaDoble()
+
+#Explica que hace el codigo
+# El código define una lista llamada "numeros" que contiene una mezcla de enteros y cadenas de texto que representan números y una palabra no numérica ("patata"). Luego, imprime esta lista.
+# A continuación, define otra lista llamada "numeros_etiquetas" que contiene las representaciones en texto de los números del 0 al 5.
+# La función "calculaDoble" recorre cada elemento de la lista "numeros". Para cada elemento, intenta convertirlo a un entero y, si tiene éxito, imprime el doble de ese número.
+# Si la conversión falla (lo que ocurre con las cadenas de texto), entra en el bloque "except". Aquí, busca el elemento en la lista "numeros_etiquetas". Si encuentra una coincidencia, imprime el doble del índice correspondiente.
+# Si no encuentra ninguna coincidencia (como en el caso de "patata"), imprime un mensaje indicando que no se pudo realizar la operación.
+
