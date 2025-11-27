@@ -10,11 +10,10 @@
         width: 100%;
       }
       body {
-        background: -webkit-linear-gradient(rgb(69, 47, 166), rgb(89, 89, 241));
+        background: grey;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Courier New', Courier, monospace;
       }
       main {
         background: white;
@@ -47,5 +46,17 @@
       </section>
       {% endfor %}
     </main>
+    <script>
+      // Selecciono todas las celdas
+      let celdas = document.querySelectorAll('div');
+      // Ahora recorro las celdas
+      celdas.forEach(function (celda) {
+        // Determino aleatoriamente si la borro o no
+        if (Math.random() < 0.5) {
+          // Si el aleatorio está por debajo de un limite
+          celda.style.color = 'white'; // Borro la celda
+        }
+      });
+    </script>
   </body>
 </html>
