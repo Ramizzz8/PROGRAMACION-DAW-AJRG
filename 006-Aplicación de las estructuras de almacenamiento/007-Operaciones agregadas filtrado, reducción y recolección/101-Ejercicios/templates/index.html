@@ -17,5 +17,11 @@
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <main>
+      {%for dato in datos:%}
+      <section>{%for numero in dato:%} {{numero}} {%endfor%}</section>
+      {%endfor%}
+    </main>
+  </body>
 </html>
