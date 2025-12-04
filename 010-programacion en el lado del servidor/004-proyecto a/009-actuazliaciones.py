@@ -1,0 +1,51 @@
+from flask import Flask, render_template, request
+import io
+import contextlib
+import traceback
+
+app = Flask(__name__)
+
+@app.route("/")
+def inicio():
+    return render_template("frente.html")
+
+@app.route("/api", methods=['POST'])
+def api():
+    data = request.get_json(force=True)
+    codigo = data.get("code", "")
+    entradas = data.get("inputs", "")
+
+    # Preparamos las líneas de entrada para input()
+    input_lines = iter(entradas.splitlines())
+
+    buffer = io.StringIO()
+
+    def custom_input(prompt=""):
+        # Escribimos el prompt en la salida para que se vea en la terminal
+        print(prompt, end="", file=buffer)
+        try:
+            return next(input_lines)
+        except StopIteration:
+            raise EOFError("No quedan más líneas de entrada (stdin).")
+
+    # Entorno de ejecución
+    # Permitimos builtins pero sobreescribimos input
+    global_env = {
+        "__name__": "__main__",
+        "input": custom_input,
+    }
+
+    try:
+        with contextlib.redirect_stdout(buffer):
+            with contextlib.redirect_stderr(buffer):
+                exec(codigo, global_env)
+    except Exception:
+        # Devolvemos el traceback completo para ver bien los errores
+        error_text = traceback.format_exc()
+        return error_text, 400
+
+    salida = buffer.getvalue()
+    return salida if salida else "OK"
+
+if __name__ == "__main__":
+    app.run(debug=True)
