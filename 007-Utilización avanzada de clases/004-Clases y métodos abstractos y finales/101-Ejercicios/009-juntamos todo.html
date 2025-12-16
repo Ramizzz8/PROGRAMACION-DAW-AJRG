@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      #rojo {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="rojo"></div>
+    <script>
+      let posx = 0;
+      let posy = 0;
+      document.onkeydown = function (tecla) {
+        switch (tecla.key) {
+          case 'w':
+            posy -= 15;
+            console.log('Arriba');
+            break;
+          case 's':
+            posy += 15;
+            console.log('Abajo');
+            break;
+          case 'a':
+            posx -= 15;
+            console.log('Izquierda');
+            break;
+          case 'd':
+            posx += 15;
+            console.log('Derecha');
+            break;
+        }
+        document.querySelector('#rojo').style.transform =
+          'translate(' + posx + 'px, ' + posy + 'px)';
+      };
+      document.onmousedown = function () {
+        console.log('Disparar');
+      };
+    </script>
+  </body>
+</html>

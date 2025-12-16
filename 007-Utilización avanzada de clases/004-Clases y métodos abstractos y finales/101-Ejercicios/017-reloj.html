@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reloj Canvas Mejorado</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      canvas {
+        background: #fafafa;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="clock" width="500" height="500"></canvas>
+
+    <script>
+      const canvas = document.getElementById('clock');
+      const contexto = canvas.getContext('2d');
+      const center = 250;
+
+      function drawClock() {
+        contexto.clearRect(0, 0, canvas.width, canvas.height);
+
+        let now = new Date();
+        let hours = now.getHours() % 12;
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+
+        // Dibujar círculo exterior
+        contexto.lineWidth = 15;
+        contexto.strokeStyle = '#000';
+        contexto.beginPath();
+        contexto.arc(center, center, 220, 0, Math.PI * 2);
+        contexto.stroke();
+
+        // Dibujar marcas de los minutos
+        for (let i = 0; i < 60; i++) {
+          let angle = (i * (Math.PI * 2)) / 60;
+          let length = i % 5 === 0 ? 20 : 10;
+          contexto.lineWidth = i % 5 === 0 ? 4 : 2;
+
+          contexto.beginPath();
+          contexto.moveTo(center + Math.cos(angle) * 200, center + Math.sin(angle) * 200);
+          contexto.lineTo(
+            center + Math.cos(angle) * (200 - length),
+            center + Math.sin(angle) * (200 - length)
+          );
+          contexto.stroke();
+        }
+
+        // Dibujar números
+        contexto.font = '30px Arial';
+        contexto.fillStyle = '#000';
+        contexto.textAlign = 'center';
+        contexto.textBaseline = 'middle';
+
+        for (let i = 1; i <= 12; i++) {
+          let angle = (i * Math.PI * 2) / 12 - Math.PI / 2;
+          contexto.fillText(i, center + Math.cos(angle) * 170, center + Math.sin(angle) * 170);
+        }
+
+        // Ángulos de las manecillas
+        let hourAngle = ((hours + minutes / 60) * (Math.PI * 2)) / 12 - Math.PI / 2;
+        let minuteAngle = ((minutes + seconds / 60) * (Math.PI * 2)) / 60 - Math.PI / 2;
+        let secondAngle = (seconds * (Math.PI * 2)) / 60 - Math.PI / 2;
+
+        contexto.lineCap = 'round';
+
+        // Manecilla hora
+        contexto.strokeStyle = '#0047AB';
+        contexto.lineWidth = 10;
+        contexto.beginPath();
+        contexto.moveTo(center, center);
+        contexto.lineTo(center + Math.cos(hourAngle) * 120, center + Math.sin(hourAngle) * 120);
+        contexto.stroke();
+
+        // Manecilla minutos
+        contexto.strokeStyle = '#00A86B';
+        contexto.lineWidth = 6;
+        contexto.beginPath();
+        contexto.moveTo(center, center);
+        contexto.lineTo(center + Math.cos(minuteAngle) * 170, center + Math.sin(minuteAngle) * 170);
+        contexto.stroke();
+
+        // Manecilla segundos
+        contexto.strokeStyle = 'red';
+        contexto.lineWidth = 2;
+        contexto.beginPath();
+        contexto.moveTo(center, center);
+        contexto.lineTo(center + Math.cos(secondAngle) * 195, center + Math.sin(secondAngle) * 195);
+        contexto.stroke();
+
+        // Centro del reloj
+        contexto.fillStyle = 'black';
+        contexto.beginPath();
+        contexto.arc(center, center, 10, 0, Math.PI * 2);
+        contexto.fill();
+
+        requestAnimationFrame(drawClock);
+      }
+
+      drawClock();
+    </script>
+  </body>
+</html>

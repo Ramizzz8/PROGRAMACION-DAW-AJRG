@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      document.onkeydown = function (tecla) {
+        switch (tecla.key) {
+          case 'w':
+            console.log('Arriba');
+            break;
+          case 's':
+            console.log('Abajo');
+            break;
+          case 'a':
+            console.log('Izquierda');
+            break;
+          case 'd':
+            console.log('Derecha');
+            break;
+        }
+      };
+      document.onmousedown = function () {
+        console.log('Disparar');
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let temporizador = setTimeout(bucle(), 1000);
+      function bucle() {
+        console.log('Ejecutando bucle<br>');
+        clearTimeout(temporizador);
+        temporizador = setTimeout(bucle, 1000);
+      }
+    </script>
+  </body>
+</html>

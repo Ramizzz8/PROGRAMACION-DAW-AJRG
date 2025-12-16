@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Ser {
+        constructor(edad) {
+          this.edad = edad;
+        }
+      }
+      class Animal extends Ser {
+        constructor(edad, especie) {
+          super(edad);
+          this.especie = especie;
+        }
+      }
+      class Perro extends Animal {
+        constructor(color) {
+          super();
+          this.color = color;
+        }
+      }
+      let Perro1 = new Perro("marron");
+      console.log(Perro1);
+    </script>
+  </body>
+</html>
