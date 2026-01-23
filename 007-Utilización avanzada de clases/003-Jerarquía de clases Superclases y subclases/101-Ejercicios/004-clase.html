@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      #nave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="naveespacial.png" id="nave" />
+    <script>
+      class Jugador {
+        constructor(x, y) {
+          this.posx = 0;
+          this.posy = 0;
+        }
+      }
+      let InstanciaJugador = new Jugador(40, 40);
+      let nave = document.querySelector('#nave');
+
+      document.onkeydown = function (tecla) {
+        console.log(tecla);
+        //arriba W= 87, abajo S= 83, izquierda A= 65, derecha D= 68
+        switch (tecla.keyCode) {
+          case 87:
+            InstanciaJugador.posy -= 5;
+            nave.style.top = InstanciaJugador.posy + 'px';
+            break;
+          case 83:
+            InstanciaJugador.posy += 5;
+            nave.style.top = InstanciaJugador.posy + 'px';
+            break;
+          case 65:
+            InstanciaJugador.posx -= 5;
+            nave.style.left = InstanciaJugador.posx + 'px';
+            break;
+          case 68:
+            InstanciaJugador.posx += 5;
+            nave.style.left = InstanciaJugador.posx + 'px';
+            break;
+        }
+        nave.style.left = InstanciaJugador.posx + 'px';
+        nave.style.top = InstanciaJugador.posy + 'px';
+      };
+    </script>
+  </body>
+</html>

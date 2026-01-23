@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      #nave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="naveespacial.png" id="nave" />
+    <script>
+      class Jugador {
+        constructor(x, y, a, v) {
+          this.posx = 0;
+          this.posy = 0;
+          this.angulo = a;
+          this.velocidad = 0;
+        }
+      }
+      class Roca {
+        constructor(x, y, a, e, v) {
+          this.posx = x;
+          this.posy = y;
+          this.angulo = a;
+          this.escala = e;
+          this.velocidad = 0;
+        }
+      }
+      class Bala {
+        constructor(x, y, a, v) {
+          this.posx = x;
+          this.posy = y;
+          this.angulo = a;
+          this.velocidad = v;
+        }
+      }
+      //Crear rocas aleatorias
+      let numero_rocas = 10; // Digo cuantas rocas quiero
+      let rocas = []; // Creo un array vacío
+      for (let i = 0; i < numero_rocas; i++) {
+        // Recorro un bucle
+        let posx_aleatoria = Math.random() * 500; // posx aleatoria entre 0 y 500
+        let posy_aleatoria = Math.random() * 500; // posy aleatoria entre 0 y 500
+        let angulo_aleatorio = Math.random() * 360; // ángulo aleatorio entre 0 y 360
+        let escala_aleatoria = Math.random() * 1.5 + 0.5; // escala aleatoria entre 0.5 y 2
+        rocas.push(new Roca(posx_aleatoria, posy_aleatoria, angulo_aleatorio, escala_aleatoria, 0)); // Creo una nueva roca
+      }
+
+      //Crear instancia del jugador
+      let InstanciaJugador = new Jugador(40, 40, 0, 0);
+      let nave = document.querySelector('#nave');
+
+      document.onkeydown = function (tecla) {
+        console.log(tecla);
+        //arriba W= 87, abajo S= 83, izquierda A= 65, derecha D= 68
+        switch (tecla.keyCode) {
+          case 87:
+            InstanciaJugador.posy -= 5;
+            nave.style.top = InstanciaJugador.posy + 'px';
+            break;
+          case 83:
+            InstanciaJugador.posy += 5;
+            nave.style.top = InstanciaJugador.posy + 'px';
+            break;
+          case 65:
+            InstanciaJugador.posx -= 5;
+            nave.style.left = InstanciaJugador.posx + 'px';
+            break;
+          case 68:
+            InstanciaJugador.posx += 5;
+            nave.style.left = InstanciaJugador.posx + 'px';
+            break;
+        }
+        nave.style.left = InstanciaJugador.posx + 'px';
+        nave.style.top = InstanciaJugador.posy + 'px';
+      };
+      //Dibujar rocas
+      for (let i = 0; i < rocas.length; i++) {
+        let nueva_roca = document.createElement('img'); // Creo un elemento img
+        nueva_roca.src = 'roca.png'; // Le asigno la imagen
+        nueva_roca.style.position = 'absolute'; // Pongo su posición a absolute
+        nueva_roca.style.left = rocas[i].posx + 'px'; // Le asigno la posx
+        nueva_roca.style.top = rocas[i].posy + 'px'; // Le asigno la posy
+        nueva_roca.style.width = '50px'; // Le asigno un tamaño
+        nueva_roca.style.transform =
+          'rotate(' + rocas[i].angulo + 'deg) scale(' + rocas[i].escala + ')'; // Le asigno rotación y escala
+        document.querySelector('body').appendChild(nueva_roca); // La añado al body
+      }
+    </script>
+  </body>
+</html>

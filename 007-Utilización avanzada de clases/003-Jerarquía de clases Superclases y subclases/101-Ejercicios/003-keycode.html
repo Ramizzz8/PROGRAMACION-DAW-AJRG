@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      #nave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="naveespacial.png" id="nave" />
+    <script>
+      let nave = document.querySelector('#nave');
+      let posx = 0;
+      let posy = 0;
+
+      document.onkeydown = function (tecla) {
+        console.log(tecla);
+        //arriba W= 87, abajo S= 83, izquierda A= 65, derecha D= 68
+        switch (tecla.keyCode) {
+          case 87:
+            posy -= 5;
+            nave.style.top = posy + 'px';
+            break;
+          case 83:
+            posy += 5;
+            nave.style.top = posy + 'px';
+            break;
+          case 65:
+            posx -= 5;
+            nave.style.left = posx + 'px';
+            break;
+          case 68:
+            posx += 5;
+            nave.style.left = posx + 'px';
+            break;
+        }
+        nave.style.left = posx + 'px';
+        nave.style.top = posy + 'px';
+      };
+    </script>
+  </body>
+</html>
