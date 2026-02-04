@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      canvas{border:1px solid black;}
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      let lienzo = document.querySelector("canvas");
+      let contexto = lienzo.getContext("2d");
+      lienzo.width = 512;
+      lienzo.height = 512;
+      contexto.fillRect(40,40,60,60); // x,y,w,h
+      contexto.fillStyle = "red";
+      //circulo
+      contexto.beginPath();
+      contexto.arc(256,256,50,0,2*Math.PI); //x,y
+      contexto.fill();
+    </script>
+  </body>
+</html>
